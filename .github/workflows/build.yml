@@ -10,21 +10,21 @@ on:
   workflow_dispatch:
     inputs:
       enable_main:
-        description: Build default boards (linux, ESP, Microbit)
+        description: Build ONLY MDBT42Q without DFU_UPDATE_BUILD=1
         type: boolean
         default: true
       enable_dfu:
         description: Build boards with DFU (puckjs, pixljs, banglejs)
         type: boolean
-        default: true
+        default: false
       enable_padded:
         description: Build boards with bootloader padding (espruinoboard, -wifi, pico)
         type: boolean
-        default: true
+        default: false
       enable_emulator:
         description: Build emulator for banglejs
         type: boolean
-        default: true
+        default: false
       
 
 permissions:
