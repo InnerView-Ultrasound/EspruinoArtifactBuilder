@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       enable_main:
-        description: Build ONLY MDBT42Q without DFU_UPDATE_BUILD=1
+        description: Build ONLY MDBT42Q and JOLT.JS without DFU_UPDATE_BUILD=1
         type: boolean
         default: true
       enable_dfu:
@@ -39,7 +39,7 @@ jobs:
     strategy:
       # devices to build for
       matrix:
-        board: [MDBT42Q]
+        board: [MDBT42Q, JOLTJS]
       # try and build for all devices even if one fails
       fail-fast: false 
     steps:
