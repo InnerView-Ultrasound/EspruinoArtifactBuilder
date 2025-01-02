@@ -147,6 +147,7 @@ This is a partial list of definitions that can be added in a `BOARD.py` file's `
 * `ESPR_GRAPHICS_SELF_INIT` - Should the Graphics library instantiate itself with its own `g` instance?
 * `ESPR_LCD_MANUAL_BACKLIGHT` - STM32/FSMC: Don't turn the backlight on and leave code to do this manually
 * `ESPR_DISABLE_KICKWATCHDOG_PIN=BTN1_PININDEX` - If this pin is 1, skip kickWatchdog calls (which would eventually force a reboot if WDT enabled)
+* `ESPR_TERMNINAL_NO_SCROLL` - disable scrolling in the onscreen terminal (once we get to the end, we just clear the screen and start at the top)
 
 
 There are some specifically that are useful for cutting a few bytes out of the build:
@@ -179,6 +180,7 @@ These are set automatically when `SAVE_ON_FLASH` is set (see `jsutils.h`)
 * `ESPR_NO_LET_SCOPING` - don't create scopes for `let` (treat it like `var`, which was the 2v13 and earlier behaviour)
 * `ESPR_NO_PROMISES` - Don't include promise-handling functions
 * `ESPR_NO_PRETOKENISE` - Don't include code to pretokenise functions marked with `"ram"` - code pretokenised in the IDE can still be executed
+* `ESPR_NO_PASSWORD` - Disable password protection on the console (E.setPassword/E.lockConsole)
 
 
 ### chip

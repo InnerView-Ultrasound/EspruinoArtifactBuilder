@@ -27,9 +27,9 @@
 #endif
 
 #ifndef BUILDNUMBER
-#define JS_VERSION "2v24"
+#define JS_VERSION "2v25"
 #else
-#define JS_VERSION "2v24." BUILDNUMBER
+#define JS_VERSION "2v25." BUILDNUMBER
 #endif
 /*
   In code:
@@ -58,6 +58,7 @@
   #define ESPR_NO_SOFTWARE_I2C 1
 #endif
 #define ESPR_NO_REGEX_OPTIMISE 1
+#define ESPR_NO_PASSWORD 1
 #endif // SAVE_ON_FLASH
 #ifdef SAVE_ON_FLASH_EXTREME
 #define ESPR_NO_BLUETOOTH_MESSAGES 1
